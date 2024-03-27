@@ -17,6 +17,7 @@ $charcoal: hsl(235, 18%, 26%);
 $grey: hsl(231, 7%, 60%);
 $white: hsl(0, 0%, 100%);
 $font-stack: "roboto", sans-serif;
+$orange-red-gradient: linear-gradient(25deg,#FF6A3A,#FF527B);
 
 * {
     font: 16px $font-stack;
@@ -25,13 +26,13 @@ $font-stack: "roboto", sans-serif;
     padding: 0;
 }
 
+.main-container, .text-container, body {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     background-color: $charcoal;
-}
-.main-container, .text-container {
-    display: flex;
-    flex-direction: column;
 }
 
 .main-container {
@@ -43,11 +44,17 @@ body {
 
 .text-container {
     margin: 1em;
+    padding: 1em;
 }
 
-h1{
-    font-size: 32px;
+h1 {
+    font-size: 52px;
     font-weight: 700;
+    margin-bottom: 32px;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 ul {
@@ -58,17 +65,65 @@ ul {
 li::before {
     content: url("./assets/images/icon-list.svg");
     vertical-align: middle;
+    margin-right: 12px;
 }
 
+li {
+    margin-bottom: 1em;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+}
+.input, .email-submit-button {
+    width: 100%;
+    height: 4em;
+    border-radius: 12px;
+}
+.input {
+    padding-left: 1em;
+    margin: 0.5em 0 1.5em 0;
+    border-color: $grey;
+}
+
+.email-submit-button {
+    border: 0;
+    font-weight: 700;
+    color: $white;
+    background-color: $dark-slate;
+    transition: all 250ms ease-out;
+    position: relative;
+    background-image: $orange-red-gradient ;
+    background-blend-mode: darken;
+}
+
+.email-submit-button:hover {
+    background: $orange-red-gradient;
+    background-blend-mode: multiply;
+}
+
+.email-submit-button:active {
+    top: 2px;
+}
+
+
 @media (orientation: landscape) {
+    body {
+        min-height: 100vh;
+    }
     .main-container {
         flex-direction: row-reverse;
-        max-width: 50%;
+        max-width: 58em;
         border-radius: 25px;
         padding: 1em;
         justify-content: space-between;
+        margin: auto;
     }
     .text-container {
         margin: 2em;
+    }
+    footer {
+        margin-top: auto;
     }
 }

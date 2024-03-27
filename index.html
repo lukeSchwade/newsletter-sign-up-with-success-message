@@ -15,52 +15,57 @@
   </style>
 </head>
 <body>
-
+  <header class="header"></header>
   <!-- Sign-up form start -->
-<div class="main-container">
-  <picture class="flavor-image">
-    <source media="(orientation:portrait)" srcset="./assets/images/illustration-sign-up-mobile.svg" alt="image">
-    <source media="(orientation:landscape)" srcset="/assets/images/illustration-sign-up-desktop.svg" alt="image"/>
-    <img src="./assets/images/illustration-sign-up-mobile.svg"alt="image"/>
-  </picture>
-  <div class="text-container">
-      
-        <h1>Stay updated!</h1>
-      
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      
-      <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-      </ul>
-      
-      <form action="">
-          <label for="email">Email address</label><br>
-          <input type="text" id="email" name="email" placeholder="mail@company.com" required></input><br>
-        
-          <input type="submit" class="email-submit-button" value="Subscribe to monthly newsletter"></input>
-        
-      </form>
-  </div>
 
-</div>
+  <main class="main-container">
+    <div class="image-container">
+      <picture class="flavor-image">
+        <source media="(orientation:portrait)" srcset="./assets/images/illustration-sign-up-mobile.svg" alt="image">
+        <source media="(orientation:landscape)" srcset="/assets/images/illustration-sign-up-desktop.svg" alt="image"/>
+        <img src="./assets/images/illustration-sign-up-mobile.svg"alt="image"/>
+      </picture>
+    </div>
+    <div class="text-container">
+        
+          <h1>Stay updated!</h1>
+        
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        
+        <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+        </ul>
+        
+        <form action="">
+            <label for="email">Email address</label><br>
+            <input class="input" type="text" id="email" name="email" placeholder="mail@company.com" required oninvalid="this.setCustomValidity('Please enter valid e-mail')"></input><br>
+          
+            <input class="email-submit-button" type="submit" value="Subscribe to monthly newsletter"></input>
+          
+        </form>
+    </div>
+  
+  </main>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
+<div class="success-confirmation">
+    Thanks for subscribing!
+  
+    A confirmation email has been sent to ash@loremcompany.com. 
+    Please open it and click the button inside to confirm your subscription.
+  
+    Dismiss message
+</div>
 
   <!-- Success message end -->
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/lukeSchwade">Luke</a>.
-  </div>
+  </footer>
 </body>
 </html>
