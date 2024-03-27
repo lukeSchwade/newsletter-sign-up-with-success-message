@@ -67,14 +67,19 @@ I learned how to implement responsive images for mobile and web design. A big on
 
 I also figured out how to use images for list styles, using ::before to properly align them.
 
-To see how you can add code snippets, see below:
+I also like the little hack I made for the button, I had an issue where the hover effect for the image wasn't a color but a gradient, so I had to transition from a background-color to a background-image on hover, which had an issue where once unhovering the animation would flicker white because the background-image would disappear instantly.
+by messing with the blend modes and setting initial blend mode to darken, the gradient is pre-loaded but invisible, then transitions to multiply blend mode which makes it visible.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.email-submit-button {
+    transition: all 150ms ease-out;
+    background-image: $orange-red-gradient ;
+    background-blend-mode: darken;
+}
+
+.email-submit-button:hover {
+    background: $orange-red-gradient;
+    background-blend-mode: multiply;
 }
 ```
 ```js
