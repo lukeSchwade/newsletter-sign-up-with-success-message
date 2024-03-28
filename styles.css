@@ -116,11 +116,15 @@ label, .invalid-message {
 }
 
 .success-confirmation {
-  display: none;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
   z-index: 1;
   padding: 1em;
+  height: 100%;
+}
+
+.thanks-h2 {
+  margin-top: 30vh;
 }
 
 .invalid-message {
@@ -134,11 +138,12 @@ label, .invalid-message {
   }
   .main-container {
     flex-direction: row-reverse;
-    max-width: 58em;
+    max-width: 50vw;
     border-radius: 25px;
     padding: 1em;
     justify-content: space-between;
     margin: auto;
+    opacity: 100%;
   }
   .text-container {
     margin: 2em;
@@ -147,9 +152,14 @@ label, .invalid-message {
     margin-top: auto;
   }
   .success-confirmation {
+    height: auto;
     border-radius: 25px;
     max-width: 30em;
     padding: 3em;
+    top: 50%;
+    left: 50%;
+    margin-left: -15em;
+    margin-top: -15em;
   }
 }
 
