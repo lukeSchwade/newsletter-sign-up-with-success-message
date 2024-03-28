@@ -18,7 +18,7 @@
   <header class="header"></header>
   <!-- Sign-up form start -->
 
-  <main class="main-container">
+  <main class="main-container" id="main-submission">
     <div class="image-container">
       <picture class="flavor-image">
         <source media="(orientation:portrait)" srcset="./assets/images/illustration-sign-up-mobile.svg" alt="image">
@@ -38,15 +38,15 @@
             <li>And much more!</li>
         </ul>
         
-        <form action="">
+        <form name="emailForm" action="javascript:;" onsubmit="return validateEmail(this)" method="post">
             <div class="container">
               <label for="email">Email address</label>
-              <div class="invalid-message">Invalid Email</div>
+              <div class="invalid-message"></div>
             </div>
             <br>
-            <input class="input" type="text" id="email" name="email" placeholder="mail@company.com" required></input><br>
+            <input class="input" type="email" id="email" name="email" placeholder="mail@company.com" required></input><br>
           
-            <input class="email-submit-button submit-button" type="submit" value="Subscribe to monthly newsletter"></input>
+            <input class="email-submit-button submit-button" id="email-submit-button" type="submit" value="Subscribe to monthly newsletter"></input>
           
         </form>
     </div>
@@ -56,15 +56,15 @@
 
   <!-- Success message start -->
 
-<div class="success-confirmation">
-    <h2>Thanks for subscribing!</h2>
+<div class="success-confirmation" id="success-confirmation">
+    <h2 class="thanks-h2">Thanks for subscribing!</h2>
   
     <p class="confirmation-info">
       A confirmation email has been sent to <span class="email-name">ash@loremcompany.com</span>. 
       Please open it and click the button inside to confirm your subscription.
     </p>
   
-    <button class="dismiss-button submit-button">Dismiss message</button>
+    <button class="dismiss-button submit-button" onclick="dismissMessageButton()">Dismiss message</button>
 </div>
 
   <!-- Success message end -->
@@ -73,5 +73,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/lukeSchwade">Luke</a>.
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>

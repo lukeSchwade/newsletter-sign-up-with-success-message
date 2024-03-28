@@ -44,6 +44,7 @@ body {
     margin: auto;
     background-color: $white;
     color: $dark-slate;
+    transition-duration: 600ms;
 
 }
 
@@ -113,7 +114,6 @@ label, .invalid-message {
 }
 
 
-
 .submit-button:hover {
     background: $orange-red-gradient;
     background-blend-mode: multiply;
@@ -124,22 +124,20 @@ label, .invalid-message {
     top: 2px;
 }
 .success-confirmation {
-    //display: none;
+    display: none;
     background-color: $white;
     position: absolute;
     z-index: 1;
     padding: 1em;
     height: 100%;
-
 }
-
-.thanks-h2 {
-    margin-top: 30vh;
+.email-name {
+    font-weight: 700;
 }
 
 .invalid-message {
     color: $tomato;
-    display: none;
+
 }
 
 @media (orientation: landscape) {

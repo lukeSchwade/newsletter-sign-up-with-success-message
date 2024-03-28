@@ -34,6 +34,7 @@ body {
   margin: auto;
   background-color: hsl(0, 0%, 100%);
   color: hsl(234, 29%, 20%);
+  transition-duration: 600ms;
 }
 
 .image-container {
@@ -116,6 +117,7 @@ label, .invalid-message {
 }
 
 .success-confirmation {
+  display: none;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
   z-index: 1;
@@ -123,13 +125,12 @@ label, .invalid-message {
   height: 100%;
 }
 
-.thanks-h2 {
-  margin-top: 30vh;
+.email-name {
+  font-weight: 700;
 }
 
 .invalid-message {
   color: hsl(4, 100%, 67%);
-  display: none;
 }
 
 @media (orientation: landscape) {
