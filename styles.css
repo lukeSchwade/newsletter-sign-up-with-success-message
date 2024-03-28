@@ -36,6 +36,10 @@ body {
   color: hsl(234, 29%, 20%);
 }
 
+.image-container {
+  align-self: center;
+}
+
 .text-container {
   margin: 1em;
   padding: 1em;
