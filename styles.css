@@ -21,6 +21,11 @@
   flex-direction: column;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 body {
   background-color: hsl(235, 18%, 26%);
 }
@@ -36,7 +41,7 @@ body {
   padding: 1em;
 }
 
-h1 {
+h1, h2 {
   font-size: 52px;
   font-weight: 700;
   margin-bottom: 32px;
@@ -50,6 +55,7 @@ ul {
   list-style: none;
   list-style-position: inside;
   margin: 0em;
+  margin-bottom: 1.5em;
 }
 
 li::before {
@@ -62,12 +68,12 @@ li {
   margin-bottom: 1em;
 }
 
-label {
+label, .invalid-message {
   font-size: 12px;
   font-weight: 700;
 }
 
-.input, .email-submit-button {
+.input, .email-submit-button, .submit-button {
   width: 100%;
   height: 4em;
   border-radius: 12px;
@@ -75,28 +81,47 @@ label {
 
 .input {
   padding-left: 1em;
-  margin: 0.5em 0 1.5em 0;
+  margin: 0 0 1.5em 0;
   border-color: hsl(231, 7%, 60%);
+  transition: all 150ms ease-out;
 }
 
-.email-submit-button {
+.input:focus {
+  box-shadow: inset 0.2em 0.2em 0.5em hsl(231, 7%, 60%);
+}
+
+.submit-button {
   border: 0;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
   background-color: hsl(234, 29%, 20%);
-  transition: all 250ms ease-out;
+  transition: all 250ms;
   position: relative;
   background-image: linear-gradient(25deg, #FF6A3A, #FF527B);
   background-blend-mode: darken;
 }
 
-.email-submit-button:hover {
+.submit-button:hover {
   background: linear-gradient(25deg, #FF6A3A, #FF527B);
   background-blend-mode: multiply;
+  filter: drop-shadow(hsl(4, 100%, 67%) 0.5em 0.5em 1em);
 }
 
-.email-submit-button:active {
+.submit-button:active {
   top: 2px;
+}
+
+.success-confirmation {
+  display: none;
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  z-index: 1;
+  padding: 1em;
+}
+
+.invalid-message {
+  color: hsl(4, 100%, 67%);
+  display: none;
 }
 
 @media (orientation: landscape) {
@@ -116,6 +141,11 @@ label {
   }
   footer {
     margin-top: auto;
+  }
+  .success-confirmation {
+    border-radius: 25px;
+    max-width: 30em;
+    padding: 3em;
   }
 }
 

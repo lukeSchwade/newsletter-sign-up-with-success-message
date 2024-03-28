@@ -39,10 +39,14 @@
         </ul>
         
         <form action="">
-            <label for="email">Email address</label><br>
+            <div class="container">
+              <label for="email">Email address</label>
+              <div class="invalid-message">Invalid Email</div>
+            </div>
+            <br>
             <input class="input" type="text" id="email" name="email" placeholder="mail@company.com" required oninvalid="this.setCustomValidity('Please enter valid e-mail')"></input><br>
           
-            <input class="email-submit-button" type="submit" value="Subscribe to monthly newsletter"></input>
+            <input class="email-submit-button submit-button" type="submit" value="Subscribe to monthly newsletter"></input>
           
         </form>
     </div>
@@ -53,12 +57,14 @@
   <!-- Success message start -->
 
 <div class="success-confirmation">
-    Thanks for subscribing!
+    <h2>Thanks for subscribing!</h2>
   
-    A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription.
+    <p class="confirmation-info">
+      A confirmation email has been sent to <span class="email-name">ash@loremcompany.com</span>. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
   
-    Dismiss message
+    <button class="dismiss-button submit-button">Dismiss message</button>
 </div>
 
   <!-- Success message end -->

@@ -31,6 +31,11 @@ $orange-red-gradient: linear-gradient(25deg,#FF6A3A,#FF527B);
     flex-direction: column;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 body {
     background-color: $charcoal;
 }
@@ -47,7 +52,7 @@ body {
     padding: 1em;
 }
 
-h1 {
+h1, h2 {
     font-size: 52px;
     font-weight: 700;
     margin-bottom: 32px;
@@ -61,6 +66,7 @@ ul {
     list-style:none;
     list-style-position: inside;
     margin: 0em;
+    margin-bottom: 1.5em;
 }
 li::before {
     content: url("./assets/images/icon-list.svg");
@@ -72,41 +78,59 @@ li {
     margin-bottom: 1em;
 }
 
-label {
+label, .invalid-message {
     font-size: 12px;
     font-weight: 700;
 }
-.input, .email-submit-button {
+.input, .email-submit-button, .submit-button {
     width: 100%;
     height: 4em;
     border-radius: 12px;
 }
 .input {
     padding-left: 1em;
-    margin: 0.5em 0 1.5em 0;
+    margin: 0 0 1.5em 0;
     border-color: $grey;
+    transition: all 150ms ease-out;
+}
+.input:focus {
+    box-shadow: inset 0.2em 0.2em 0.5em $grey;
 }
 
-.email-submit-button {
+.submit-button {
     border: 0;
     font-weight: 700;
     color: $white;
     background-color: $dark-slate;
-    transition: all 250ms ease-out;
+    transition: all 250ms;
     position: relative;
     background-image: $orange-red-gradient ;
     background-blend-mode: darken;
 }
 
-.email-submit-button:hover {
+
+
+.submit-button:hover {
     background: $orange-red-gradient;
     background-blend-mode: multiply;
+    filter: drop-shadow($tomato 0.5em 0.5em 1em);
 }
 
-.email-submit-button:active {
+.submit-button:active {
     top: 2px;
 }
+.success-confirmation {
+    display: none;
+    background-color: $white;
+    position: absolute;
+    z-index: 1;
+    padding: 1em;
+}
 
+.invalid-message {
+    color: $tomato;
+    display: none;
+}
 
 @media (orientation: landscape) {
     body {
@@ -125,5 +149,11 @@ label {
     }
     footer {
         margin-top: auto;
+    }
+    .success-confirmation {
+        border-radius: 25px;
+        max-width: 30em;
+        padding: 3em;
+        
     }
 }
