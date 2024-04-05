@@ -78,8 +78,6 @@ by messing with the blend modes and setting initial blend mode to darken, the gr
 
 I'm more interested in building backend now, and reading more about regex
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
 - [Making responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - great resource for responsive images
