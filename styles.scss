@@ -126,10 +126,14 @@ label, .invalid-message {
 .success-confirmation {
     display: none;
     background-color: $white;
-    position: absolute;
+    position: sticky;
+    top: 10px;
     z-index: 1;
     padding: 1em;
-    height: 100%;
+    height: 100vh; 
+}
+.check-mark {
+    margin-bottom: 1em;
 }
 .email-name {
     font-weight: 700;
@@ -146,7 +150,7 @@ label, .invalid-message {
     }
     .main-container {
         flex-direction: row-reverse;
-        max-width: 50vw;
+        max-width: 80vw;
         border-radius: 25px;
         padding: 1em;
         justify-content: space-between;
@@ -160,12 +164,13 @@ label, .invalid-message {
         margin-top: auto;
     }
     .success-confirmation {
+        position: absolute;
         height: auto;
         border-radius: 25px;
         max-width: 30em;
         padding: 3em;
-        top: 50%;
-        left: 50%;
+        top: 50vh;
+        left: 50vw;
         margin-left: -15em;
         margin-top: -15em ;
     }

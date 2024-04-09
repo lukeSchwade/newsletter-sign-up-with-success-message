@@ -42,6 +42,7 @@ Users should be able to:
 
   ![Desktop preview](./design/Final%20Screenshot%20Desktop.png)
   ![Mobile preview](./design/Final%20Screenshot%20Mobile.png)
+  
 ## My process
 
 ### Built with
@@ -82,8 +83,6 @@ by messing with the blend modes and setting initial blend mode to darken, the gr
 ### Continued development
 
 I'm more interested in building backend now, and reading more about regex
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
