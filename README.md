@@ -7,6 +7,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
+  - [Screenshots](#screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -37,6 +38,10 @@ Users should be able to:
 - Solution URL: [github](https://github.com/lukeSchwade/newsletter-sign-up-with-success-message)
 - Live Site URL: [Live Site](https://lukeschwade.github.io/newsletter-sign-up-with-success-message/)
 
+### Screenshots
+
+  ![Desktop preview](./design/Final%20Screenshot%20Desktop.png)
+  ![Mobile preview](./design/Final%20Screenshot%20Mobile.png)
 ## My process
 
 ### Built with
